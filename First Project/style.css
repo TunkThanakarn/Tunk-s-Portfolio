@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Prompt:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Prompt', 'Montserrat', sans-serif;
+  scroll-behavior: smooth; /* เลื่อนนุ่มนวล */
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background-color: #111;
+  text-align: center;
+  padding: 40px 10px;
+  box-shadow: 0 0 20px #fff;
+  animation: fadeDown 1s ease-in-out;
+}
+header h1 {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 2px;
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+header p {
+  color: #ccc;
+  font-size: 1.1em;
+  margin-top: 8px;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  background: #000000;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+nav a {
+  color: #ffffff;
+  margin: 0 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Main container */
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  background: #111;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0,191,255,0.15);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Projects */
+.project {
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 1px solid #222;
+  border-radius: 12px;
+  background-color: #0a0a0a;
+  transition: 0.4s;
+  animation: slideUp 0.8s ease both;
+}
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0,191,255,0.3);
+}
+.project h3 {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  transition: 0.4s;
+  animation: fadeIn 1.5s ease;
+}
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(141, 141, 141, 0.3);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #111;
+  color: #777;
+  margin-top: 50px;
+  font-size: 0.9em;
+  animation: fadeUp 1s ease-in-out;
+}
+
+/* 🔥 Keyframes (อนิเมชัน) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 5px #a0a0a0, 0 0 10px #a0a0a0; }
+  to { text-shadow: 0 0 20px #a0a0a0, 0 0 40px #a0a0a0; }
+}
